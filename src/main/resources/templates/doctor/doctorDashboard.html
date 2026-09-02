@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Hospital CMS - Doctor</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link rel="stylesheet" th:href="@{/css/doctorDashboard.css}">
+</head>
+<body>
+  <header id="header"></header>
+
+  <main class="dashboard">
+    <input type="text" id="searchBar" placeholder="Search by patient name">
+    <input type="date" id="dateFilter">
+    <table id="appointmentTable">
+      <thead>
+        <tr><th>Date</th><th>Patient Name</th><th>Time</th><th>Prescription</th></tr>
+      </thead>
+      <tbody id="appointmentBody"></tbody>
+    </table>
+  </main>
+
+  <div id="modalRoot"></div>
+  <footer id="footer"></footer>
+
+  <script src="/js/config/config.js"></script>
+  <script src="/js/components/header.js"></script>
+  <script src="/js/components/footer.js"></script>
+  <script src="/js/components/modal.js"></script>
+  <script src="/js/services/patientServices.js"></script>
+  <script src="/js/pages/doctorDashboard.js"></script>
+</body>
+</html>

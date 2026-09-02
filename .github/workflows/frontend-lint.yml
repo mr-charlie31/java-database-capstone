@@ -1,0 +1,13 @@
+name: Frontend Lint
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - run: npx htmlhint "app/src/main/resources/templates/**/*.html"
+      - run: npx stylelint "app/src/main/resources/static/css/**/*.css"
+      - run: npx eslint "app/src/main/resources/static/js/**/*.js"

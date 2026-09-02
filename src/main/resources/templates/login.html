@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Hospital CMS</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+  <header id="header"></header>
+
+  <main class="role-select">
+    <h1>Select Your <span class="highlight">Role</span></h1>
+    <button id="adminBtn" class="role-btn">Admin</button>
+    <button id="patientBtn" class="role-btn">Patient</button>
+    <button id="doctorBtn" class="role-btn">Doctor</button>
+  </main>
+
+  <div id="modalRoot"></div>
+
+  <footer id="footer"></footer>
+
+  <script src="/js/config/config.js"></script>
+  <script src="/js/components/header.js"></script>
+  <script src="/js/components/footer.js"></script>
+  <script src="/js/components/modal.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+</html>

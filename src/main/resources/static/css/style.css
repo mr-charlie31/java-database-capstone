@@ -1,0 +1,57 @@
+:root {
+  --teal-dark: #0b3d3a;
+  --teal-light: #d7f0ec;
+  --accent-red: #c0392b;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+body { background: var(--teal-light); min-height: 100vh; display: flex; flex-direction: column; }
+
+header {
+  background: var(--white);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.role-select {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.role-select h1 { margin-bottom: 1.5rem; font-size: 2rem; }
+.highlight { color: var(--accent-red); }
+
+.role-btn {
+  background: var(--teal-dark);
+  color: var(--white);
+  border: none;
+  padding: 0.9rem 3rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 260px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.role-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+footer {
+  background: var(--white);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.error-text { color: var(--accent-red); font-size: 0.8rem; margin-top: 0.25rem; }
+input.invalid { border-color: var(--accent-red); }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Hospital CMS - Find a Doctor</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link rel="stylesheet" th:href="@{/css/adminDashboard.css}">
+</head>
+<body>
+  <header id="header"></header>
+
+  <main class="dashboard">
+    <input type="text" id="searchBar" placeholder="Search Bar for custom output">
+    <div class="filters">
+      <select id="timeFilter">
+        <option value="">Filter by Time</option>
+        <option value="09">AM</option>
+        <option value="14">PM</option>
+      </select>
+      <select id="specialtyFilter">
+        <option value="">Filter by Specialty</option>
+        <option value="Cardiologist">Cardiologist</option>
+        <option value="Neurologist">Neurologist</option>
+        <option value="Orthopedist">Orthopedist</option>
+        <option value="Pediatrician">Pediatrician</option>
+        <option value="Dermatologist">Dermatologist</option>
+      </select>
+    </div>
+    <div id="doctorList" class="doctor-grid"></div>
+  </main>
+
+  <div id="modalRoot"></div>
+  <footer id="footer"></footer>
+
+  <script src="/js/config/config.js"></script>
+  <script src="/js/components/header.js"></script>
+  <script src="/js/components/footer.js"></script>
+  <script src="/js/components/modal.js"></script>
+  <script src="/js/components/doctorCard.js"></script>
+  <script src="/js/services/doctorServices.js"></script>
+  <script src="/js/services/appointmentServices.js"></script>
+  <script src="/js/pages/patientDashboard.js"></script>
+</body>
+</html>

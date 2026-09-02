@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Appointment</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link rel="stylesheet" th:href="@{/css/updateAppointment.css}">
+</head>
+<body>
+  <header id="header"></header>
+
+  <main class="update-form">
+    <h1>Update <span class="highlight">Appointment</span></h1>
+    <form id="updateForm" novalidate>
+      <label>Patient Name</label>
+      <input type="text" id="patientName" disabled>
+
+      <label>Doctor Name</label>
+      <input type="text" id="doctorName" disabled>
+
+      <label>Date</label>
+      <input type="date" id="apptDate" required>
+
+      <label>Time</label>
+      <select id="apptTime" required>
+        <option value="09:00">09:00-10:00</option>
+        <option value="10:00">10:00-11:00</option>
+        <option value="11:00">11:00-12:00</option>
+        <option value="14:00">14:00-15:00</option>
+      </select>
+
+      <div class="error-text" id="updateError"></div>
+      <button type="submit" class="role-btn">Update Appointment</button>
+      <button type="button" id="cancelBtn" class="role-btn secondary">Cancel</button>
+    </form>
+  </main>
+
+  <script src="/js/config/config.js"></script>
+  <script src="/js/components/header.js"></script>
+  <script src="/js/services/appointmentServices.js"></script>
+  <script src="/js/pages/updateAppointment.js"></script>
+</body>
+</html>

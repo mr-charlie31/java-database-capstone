@@ -1,0 +1,8 @@
+.dashboard { padding: 2rem; max-width: 1000px; margin: 0 auto; width: 100%; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; background: var(--white); }
+th, td { padding: 0.8rem 1rem; text-align: left; }
+thead th { color: var(--teal-dark); border-bottom: 2px solid var(--teal-light); }
+tbody tr:nth-child(even) { background: var(--teal-light); }
+
+.rx-icon { cursor: pointer; width: 24px; }
